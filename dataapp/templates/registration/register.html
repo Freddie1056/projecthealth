@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="{% static 'images/firstcorrectspell.jpg' %}">
+  <style>
+    body{
+        background-color: #007bff;
+    }
+    h2{
+        color: black;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Input field styles */
+      .form-control {
+        border-radius: 5px;
+        box-shadow: none;
+      }
+      
+      .form-label {
+        color: #777;
+      }
+      
+      /* Button styles */
+      .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 form-container">
+            <div class="text-center">
+              <img src="{% static 'images/images/personalbest.jpg' %}" alt="Logo" style="width: 100px; height: 100px;">
+          </div>          
+            <h2 class="text-center mb-4">Hospital Registration Form</h2>
+            <form id="registrationForm" method = 'POST'>
+              {% csrf_token%}
+              <div class="form-group">
+                {% comment %} <input type="text" class="form-control" id="name" placeholder="Name" required> {% endcomment %}
+                <label for="">Username</label>
+                  {{ form.username }}
+              </div>
+              
+              <div class="form-group">
+                  <label for="">Password</label>
+                  {{ form.password1 }}
+              </div>
+              <div class="form-group">
+                  <label for="">Confirm Password</label>
+                  {{ form.password2 }}
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Register <a href="./dataentry.html"></a></button>
+              <small class="d-block mt-3 text-center">I have an account <a href="{%url 'login'%}">Login</a></small>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+
+  <!-- Bootstrap JS -->
+  <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>  
+  <!-- Your custom JavaScript -->
+  <!-- Add registration form validation and submission logic using JavaScript/jQuery -->
+</body>
+</html>

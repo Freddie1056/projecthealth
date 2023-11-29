@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>Records</title>
+</head>
+
+<body>
+    {% comment %} {% include 'navbar.html' %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %} {% endcomment %}
+
+    <h1>{{title}}</h1>
+
+    {% comment %} <div class="myForm">
+        <form method='POST' action='' class="search-form">{% csrf_token %}
+            <div class="row">
+                <div class='col-sm-12'>
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-3">
+                            {{ form.invoice_number}}
+                        </div>
+                        <div class="form-group col-md-3">
+                            {{ form.name }}
+                        </div>
+                        <div class="form-group col-md-3">
+                            {{ form.generate_invoice}}
+                        </div>
+                        <div class="form-group col-md-3 align-self-center">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br> {% endcomment %}
+    <a href="{% url "logout" %}" class="btn btn-warning">Log Out</a>
+    {% if request.user.is_authenticated %}
+    <p>Welcome {{user}} </p>
+    {% else %}
+    <p>Please try again to Login</p>
+    <a href="{% url "login" %}" class="btn btn-info">Login</a>
+    {% endif %}
+
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>DATE</th>
+                <th>BLOOD PRESSURE(mmHg)</th>
+                <th>BLOOD SUGAR(mols/dL)</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        {% for instance in records %}
+        <tr>
+            <td>{{instance.date}}</td>
+            <td>{{instance.blood_pressure}}(mmHg)</td>
+            <td>{{instance.blood_sugar}}(mols/dL)</td>
+            <td><a href="{% url 'update' instance.id %}">Update</a></td>
+            <td><a href="{% url 'delete' instance.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button><a href="{% url "create" %}">ADD</a></button>
+    <script src="{% static 'js/jquery-3.6.4.js' %}"></script>
+    <script src="{% static 'jquery-ui-1.13.2/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/fancyTable.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

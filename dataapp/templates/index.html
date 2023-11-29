@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="">
+<head>
+<title>KIRINYAGA HEALTHCOMPANION</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="{% static 'images/images/firstcorrectspell.jpg' %}">
+</head>
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear"> 
+    <div class="fl_left">
+      <ul class="nospace">
+        <li><i class="fa fa-phone"></i> +254 712345678</li>
+        <li><i class="fa fa-envelope-o"></i> info@kirinyagacompanion.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace">
+        <ul>
+          <li><a href="{% url 'index' %}"><i class="fa fa-lg fa-home"></i></a></li>
+          {% comment %} <li><a href="{% url 'create' %}">Contact</a></li> {% endcomment %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wrapper row1">
+  
+  <header id="header" class="hoc clear">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-1" style="display: inline-block;">
+              <div class="text-center">
+                  <img src="{% static 'images/images/personalbest.jpg' %}" alt="Logo" style="width: 100px; height: 100px;">
+              </div>
+          </div>
+          <div class="col-md-10" style="display: inline-block;">
+              <div id="logo" class="fl_left">
+                  <h1><a href="index.html">KIRINYAGA HEALTHCOMPANION</a></h1>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div class="bgded overlay" style="background-image:url('{% static "images/demo/backgrounds/pexels-matheus-cenali-2534496.jpg" %}');">
+  <div id="pageintro" class="hoc clear"> 
+      <ul class="slides">
+        <li>
+          <article>
+            <p>Kirinyaga Healthcompanion</p>
+            <h3 class="heading">Diabetes and Hypertension  Digital Wellness Partner</h3>
+            <p>Stay Ahead of Your Health Journey with Kirinyaga Healthcompanion.</p>
+            <footer><a class="btn" href="#">More</a></footer>
+          </article>
+        </li>
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading">Diabetes</h3>
+      <p>
+        Diabetes is a chronic health condition characterized by elevated levels of blood glucose (sugar) in the body. This occurs either when the pancreas doesn't produce enough insulin (Type 1 diabetes) or when the body cannot effectively use the insulin it produces (Type 2 diabetes). Insulin is a hormone that helps regulate blood sugar levels and allows glucose to enter cells to provide energy. Uncontrolled diabetes can lead to serious complications affecting various organs, including the eyes, kidneys, nerves, and heart. Symptoms of diabetes may include increased thirst, frequent urination, fatigue, blurred vision, and slow wound healing.
+        <h3>Hypertension (High Blood Pressure)</h3>
+      <p>Hypertension, commonly known as high blood pressure, is a condition where the force of blood against the walls of the arteries is consistently too high. This elevated pressure can strain the heart, blood vessels, and organs over time, increasing the risk of serious health problems such as heart disease, stroke, and kidney damage. Hypertension often develops over years and usually has no symptoms, earning it the nickname "silent killer." Lifestyle factors, genetic predisposition, and certain medical conditions can contribute to high blood pressure. It can be managed with lifestyle changes, medication, and regular monitoring.
+      Both diabetes and hypertension are chronic conditions that require ongoing management, including lifestyle modifications, medication adherence (if prescribed), regular monitoring, and, in some cases, medical intervention to prevent complications and maintain overall health.</p>
+    </div>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('{% static "images/demo/backgrounds/breno-machado-in9-n0JwgZ0-unsplash.jpg" %}');">
+  <article class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="three_quarter first">
+      <h6 class="nospace">Stay in the Loop, Anytime, Anywhere</h6>
+    </div>
+    <footer class="one_quarter"><a class="btn" href="#">Join Us</a></footer>
+    <!-- ################################################################################################ -->
+  </article>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay light" style="background-color:white">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading">What does Kirinyaga HealthCompanion offer?</h3>
+    </div>
+    <ul class="nospace group services">
+      <li class="one_third first">
+        <article><a href="#"><i class="icon bi bi-hospital"></i></a>
+          <h6 class="heading">Health Metrics Tracking</h6>
+          <p>Allows users to input and track vital health metrics such as blood glucose levels, blood pressure readings, weight, and other relevant parameters.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="icon"></i></a>
+          <h6 class="heading">Remote Monitoring</h6>
+          <p>Enables healthcare providers to remotely monitor patient health metrics in real-time, facilitating timely interventions based on the collected data.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="icon"></i></a>
+          <h6 class="heading">User-Friendly Interface</h6>
+          <p>  Features an intuitive and easy-to-use interface to encourage regular usage and engagement.</p>
+        </article>
+      </li>
+      <li class="one_third first">
+        <article><a href="#"><i class="icon"></i></a>
+          <h6 class="heading">Health Education Resources</h6>
+          <p> Offers educational materials and resources for better understanding and managing health conditions.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="icon"></i></a>
+          <h6 class="heading">Compatibility</h6>
+          <p>Accessible across multiple platforms - web, mobile, and tablet devices.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="icon"></i></a>
+          <h6 class="heading">Integration Capabilities</h6>
+          <p>Ability to integrate with electronic health records (EHRs) or share data with healthcare providers for comprehensive care.</p>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div></div>
+</div>
+
+  <article class="hoc container"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading">Decoding Your Health Metrics</h3>
+      <!-- <p>Ante vehicula suscipit suscipit mauris varius proin sed libero ut.</p> -->
+    </div>
+    <ul class="nospace group">
+      <li class="one_half first borderedbox inspace-15">
+        <blockquote>What makes us stand out? Smart analytics! The web app's intelligent algorithms analyze the data entered, providing users with personalized insights and trends. It's not just about numbers; it's about understanding what they mean for your health. Our app highlights patterns, offering tailored suggestions for lifestyle adjustments or potential interventions.</blockquote>
+        <p class="right bold">James / Successiful Tester</p>
+      </li>
+      <li class="one_half borderedbox inspace-15">
+        <blockquote>Imagine a savvy digital tool that's your cool companion in managing health. Our web app breaks the stereotypes of traditional health tracking. It's all about empowering users, offering a slick and user-friendly interface to effortlessly input daily health metrics. No more hassle—just a few taps or clicks to record blood pressure readings, blood sugar levels, medications, and lifestyle habits.
+        </blockquote>
+        <p class="right bold">Google / Approver</p>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </article>
+</div>
+<div class="wrapper bgded overlay" style="background-image: url('{% static 'demo/backgrounds/anton-chernyavskiy-LvjY3vGNZJg-unsplash.jpg' %}');">
+
+</div>
+
+  <article class="hoc container center"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading">Kirinyaga HealthCompanion</h3>
+      <p>Elevating Health Standards, Kirinyaga Style</p>
+    </div>
+    <footer><a class="btn inverse" href="#">Are you still curious?</a></footer>
+  </article>
+</div>
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="heading">Find us on</h6>
+      <ul class="nospace btmspace-30 linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          street office Corner space 
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +2547 12345678</li>
+        <li><i class="fa fa-envelope-o"></i> info@kirinyagahealthcompanion.com</li>
+      </ul>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="{{ facebook_link }}"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="{{ twitter_link }}"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="{{ dribble_link }}"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="{{ linkedin_link }}"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="{{ google_plus_link }}"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="{{ vk_link }}"><i class="fa fa-vk"></i></a></li>
+    </ul>      
+    </div>
+    <div class="one_third">
+      <h6 class="heading">
+        <img src="{% static 'images/images/personalbest.jpg' %}" alt="Logo" style="width: 100px; height: 100px;">
+    </h6>    
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Some of our projects include:</h6>
+      <p class="nospace btmspace-30"><a href="www.github.com">Trial</a></p>
+      <p><a href="www.pexels.com">Pexels</a></p>  
+      <p><a href="https://codepen.io/">Codepen</a></p>
+      <p> <a href="https://www.flickr.com/">Flickr</a></p>
+    </div>
+  </footer>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a href="#">HealthCompanion</a></p>
+    <p class="fl_right">HealthCompanion <a target="_blank" href="https://www.healthcompanion.com/" title="Free Website Templates"></a></p>
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.flexslider-min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Health Data Entry</title>
+  <!-- Bootstrap CSS -->
+  <link rel="icon" href="{% static 'images/firstcorrectspell.jpg' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        background-image: url(./images/images/medic1.jpg);
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border: 1px solid green;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2 class="text-center mb-4">Daily Health Data Entry</h2>
+      <form id="healthDataForm" method="POST">
+        {% csrf_token %}
+        {% comment %} <div class="form-group">
+            <label for="date">Date of Entry:</label>
+            {% comment %} <input type="date" class="form-control" id="date" name="date" placeholder="Enter date (e.g., 01/01)" required> {% endcomment %}
+            {% comment %} {{form.date}} {% endcomment %}
+          {% comment %} </div> {% endcomment %}
+        <div class="form-group">
+          <label for="bloodPressure">Blood Pressure:</label>
+          {% comment %} <input type="text" class="form-control" id="bloodPressure" name="bloodPressure" placeholder="Enter blood pressure (e.g., 120/80)" required> {% endcomment %}
+          {{form.blood_pressure}}
+        </div>
+        <div class="form-group">
+          <label for="bloodSugar">Blood Sugar:</label>
+          {% comment %} <input type="text" class="form-control" id="bloodSugar" name="bloodSugar" placeholder="Enter blood sugar level (e.g., 100 mg/dL)" required> {% endcomment %}
+          {{form.blood_sugar}}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+<script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

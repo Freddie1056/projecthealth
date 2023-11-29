@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <h1>ARE YOU SURE YOU WONNA DELETE</h1>
+        <button type="submit" class="btn btn-danger">DELETE</button>
+        <a href="{% url 'retrieve' %}" class="btn btn-primary">Cancel</a>
+    </form>
+</body>
+</html>
