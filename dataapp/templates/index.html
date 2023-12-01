@@ -22,8 +22,13 @@
         <ul>
           <li><a href="{% url 'index' %}"><i class="fa fa-lg fa-home"></i></a></li>
           {% comment %} <li><a href="{% url 'create' %}">Contact</a></li> {% endcomment %}
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
           <li><a href="{% url 'login' %}">Login</a></li>
           <li><a href="{% url 'register' %}">Register</a></li>
+          {% endif %}
+
       </ul>
       </ul>
     </div>
@@ -174,7 +179,7 @@
       <h3 class="heading">Kirinyaga HealthCompanion</h3>
       <p>Elevating Health Standards, Kirinyaga Style</p>
     </div>
-    <footer><a class="btn inverse" href="#">Are you still curious?</a></footer>
+    <footer><a class="btn inverse" href="#">Join us</a></footer>
   </article>
 </div>
 <div class="wrapper row4">

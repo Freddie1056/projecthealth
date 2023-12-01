@@ -24,7 +24,7 @@ def create(request):
 
 @login_required
 def retrieve(request):
-    records = Patient.objects.all()
+    records = Patient.objects.filter(user=request.user)
     return render(request, 'retrieve.html', {'records': records})
 
 @login_required
